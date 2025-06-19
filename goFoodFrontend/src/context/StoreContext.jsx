@@ -21,9 +21,21 @@ const addToCart = (itemId)=>{
 const removeFromCart = (itemId)=>{
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
 }
-useEffect(()=>{
-    console.log(cartItems);
-},[cartItems])
+// useEffect(()=>{
+//     console.log(cartItems);
+// },[cartItems])
+
+//get cart total
+const getTotalCartAmount = ()=>{
+    let totalAmount = 0
+    for (const item in cartItems) {
+        if (cartItems[item]>0) {
+            let itemInfo = food_list.find((product)=> product._id === item)
+            totalAmount += itemInfo.price * cartItems[item]
+        }
+    }
+    return totalAmount;
+}
 
 //provide any function and access in any function
     const contextValue = {
@@ -31,7 +43,8 @@ useEffect(()=>{
         cartItems,
         setCartItems,
         removeFromCart,
-        addToCart
+        addToCart,
+        getTotalCartAmount
     }
     
     return (
