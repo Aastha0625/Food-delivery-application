@@ -2,16 +2,8 @@ import foodModel from "../models/foodModel.js";
 import fs from 'fs'
 
 //add food item(store product data in database)
-const addFood = async (req, res) => {
-  try {
-    if (!req.file) {
-      return res.status(400).json({ success: false, message: "Image file is required" });
-    }
-
-    console.log("req.file:",req.file);
-    
-
-    const image_filename = req.file.filename;
+const addFood = async (req,res)=>{
+    let image_filename = `${req.file.filename}`;
 
 //whenevr we hit api , get these details in body, send these and access in backend using this func.
     const food = new foodModel({
@@ -23,13 +15,39 @@ const addFood = async (req, res) => {
     })
 
     //saving product check
-    await food.save();
-    res.json({ success: true, message: "Food Added" });
+    try {
+        await food.save()
+        res.json({success: true, message: "Food Added"})
+    } catch (error) {
+        console.log(error);
+        res.json({success:false,message: "Error"})
+    }
+}
 
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ success: false, message: "Internal Server Error" });
-  }
-};
+//all food list
+const listFood = async(req,res)=>{
+    try {
+        const foods = await foodModel.find({})
+        res.json({success:true,data:foods})
+    } catch (error) {
+        console.log("Error");
+        res.json({success:false,message:"Error"})
+    }
+}
 
-export {addFood};
+//remove food items
+const removeFood = async(req,res)=>{
+    try {
+        const food = await foodModel.findById(req.body._id)
+        fs.unlink(`uploads/${food.image}`,()=>{})  //delete image from uploads
+
+        await foodModel.findByIdAndDelete(req.body._id) 
+        res.json({succes:true, message:"Food item removed"})
+
+    } catch (error) {
+        console.log("Error");
+        res.json({succes:false , message:"Error"})
+    }
+}
+
+export {addFood,listFood,removeFood};

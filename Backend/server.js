@@ -18,7 +18,7 @@ connectDB();
 //api endpoints
 //for foodRoute:
 app.use('/api/food',foodRouter)
-
+app.use("/images",express.static('uploads')) //can visit image on browser /images/address
 
 
 //http method request data from server  '/' is endpoint
