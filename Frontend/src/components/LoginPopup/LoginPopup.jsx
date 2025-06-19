@@ -1,6 +1,6 @@
 import React from 'react'
 import './LoginPopup.css'
-import { assets } from '../../assets/assets'
+import {assets} from '../../assets/assets.js'
 import { useState } from 'react'
 
 
