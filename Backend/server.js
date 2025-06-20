@@ -2,6 +2,8 @@ import express from "express"
 import cors from "cors"
 import { connectDB } from "./config/db.js"
 import foodRouter from "./routes/foodRoute.js"
+import userRouter from "./routes/userRoute.js"
+import 'dotenv/config'
 
 
 //app config: initialise app using express
@@ -19,7 +21,7 @@ connectDB();
 //for foodRoute:
 app.use('/api/food',foodRouter)
 app.use("/images",express.static('uploads')) //can visit image on browser /images/address
-
+app.use("/api/user",userRouter) //to visit endpoint user
 
 //http method request data from server  '/' is endpoint
 app.get("/",(req,res)=>{

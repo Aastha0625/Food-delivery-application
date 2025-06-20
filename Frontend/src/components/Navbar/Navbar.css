@@ -62,6 +62,46 @@
     right: -8px
 }
 
+.navbar-profile {
+  position: relative;
+}
+
+.navbar-profile-dropdown {
+  position: absolute;
+  display: none;
+  right: 0;
+  z-index: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  list-style: none;
+}
+
+.navbar-profile:hover .navbar-profile-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #fff2ef;
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: 1px solid rgb(216, 209, 207);
+  outline: 2px solid white;
+  list-style: none;
+}
+
+.navbar-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.navbar-profile-dropdown li:hover{
+    color: rgb(218, 55, 27);
+}
+
+
 /* make website responsive */
 @media(max-width: 1050px){
     .navbar .logo{
