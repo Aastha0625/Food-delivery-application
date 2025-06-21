@@ -5,6 +5,7 @@ import foodRouter from "./routes/foodRoute.js"
 import userRouter from "./routes/userRoute.js"
 import 'dotenv/config'
 import cartRouter from "./routes/cartRoute.js"
+import orderRouter from "./routes/orderRoute.js"
 
 
 //app config: initialise app using express
@@ -24,6 +25,7 @@ app.use('/api/food',foodRouter)
 app.use("/images",express.static('uploads')) //can visit image on browser /images/address
 app.use("/api/user",userRouter) //to visit endpoint user
 app.use("/api/cart",cartRouter)
+app.use("/api/order",orderRouter)
 
 //http method request data from server  '/' is endpoint
 app.get("/",(req,res)=>{

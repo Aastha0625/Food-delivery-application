@@ -3,6 +3,7 @@ import './PlaceOrder.css'
 import { StoreContext } from '../../context/StoreContext'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import {useNavigate} from 'react-router-dom'
 import axios from 'axios'
 
 
@@ -54,7 +55,16 @@ const PlaceOrder = () => {
       alert("error")
     }
   }
-  
+
+ 
+  const navigate = useNavigate();
+
+useEffect(() => {
+    if (!token || getTotalCartAmount() === 0) {
+      navigate('/cart');
+    }
+  }, [token, getTotalCartAmount]);
+ 
   
   return (
     <form onSubmit={placeOrder} className='place-order'>
