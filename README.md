@@ -2,6 +2,13 @@
 
 A complete full-stack food ordering application with user authentication, cart system, Stripe payments, and order tracking — built using **React**, **Node.js**, **Express**, and **MongoDB**.
 
+## Deployment
+  **Frontend**
+  https://food-delivery-frontend-6uso.onrender.com/
+
+  **Frontend: Admin**
+  https://food-delivery-admin-scu8.onrender.com/
+
 ---
 
 ## 🚀 Features
