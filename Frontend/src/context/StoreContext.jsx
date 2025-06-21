@@ -81,7 +81,7 @@ const getTotalCartAmount = ()=>{
     return totalAmount;
 }
 
-//provide any function and access in any function
+//provided any function and access in any function
     const contextValue = {
         food_list,
         cartItems,
