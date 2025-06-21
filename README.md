@@ -33,17 +33,6 @@ A complete full-stack food ordering application with user authentication, cart s
 
 ---
 
-## 🖼️ Screenshots
-
-<!-- Add your own images here -->
-- Home Page  : <img src=""C:\Users\aasth\OneDrive\Pictures\Screenshots\Screenshot 2025-06-21 154530.png"" alt=""/>
-- Cart Page  
-- Checkout with Stripe  
-- My Orders  
-- Admin Upload Panel
-
----
-
 ## 🔧 Setup Instructions
 
 ### 📦 Backend
