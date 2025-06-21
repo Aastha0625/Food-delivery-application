@@ -55,7 +55,7 @@ const fetchOrders = async () => {
         <p>
           <span>&#x25cf;</span> <b>{data[data.length - 1].status}</b>
         </p>
-        <button>Track order</button>
+        <button onClick={fetchOrders}>Track order</button>
       </div>
     )}
   </div>
