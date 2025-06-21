@@ -7,7 +7,7 @@ export const StoreContext = createContext(null)  //created and exported context
 const StoreContextProvider = (props)=>{
 
 const [cartItems, setCartItems] = useState({}); //for efficient counter
-const url = "https://food-delivery-backend-h5ei.onrender.com"
+const url = "http://localhost:4000"
 
 //state variable
 const [token,setToken] = useState("")
