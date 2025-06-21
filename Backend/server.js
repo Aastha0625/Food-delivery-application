@@ -10,7 +10,7 @@ import orderRouter from "./routes/orderRoute.js"
 
 //app config: initialise app using express
 const app = express()
-const port = "http://localhost:4000" //host port
+const port = process.env.PORT || 4000 //host port
 
 //middleware
 app.use(express.json())  //frontend to backend req passed through express.json
