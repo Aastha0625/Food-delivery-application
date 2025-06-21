@@ -1,4 +1,4 @@
-# 🍔 Full-Stack Food Delivery App
+#  Full-Stack Food Delivery App
 
 A complete full-stack food ordering application with user authentication, cart system, Stripe payments, and order tracking — built using **React**, **Node.js**, **Express**, and **MongoDB**.
 
@@ -11,19 +11,19 @@ A complete full-stack food ordering application with user authentication, cart s
 
 ---
 
-## 🚀 Features
+##  Features
 
-- 🔐 User Authentication (JWT)
-- 🛒 Add/Remove items from cart
-- 💳 Stripe Payment Integration
-- 📦 Track placed orders
-- 🍽️ Browse food items with dynamic UI
-- 🖼️ Admin-friendly image uploads (Multer)
-- 📁 Organized folder structure with reusable components
+-  User Authentication (JWT)
+-  Add/Remove items from cart
+-  Stripe Payment Integration
+-  Track placed orders
+-  Browse food items with dynamic UI
+-  Admin-friendly image uploads (Multer)
+-  Organized folder structure with reusable components
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 **Frontend**:  
 - React (Hooks + Context API)  
@@ -40,9 +40,9 @@ A complete full-stack food ordering application with user authentication, cart s
 
 ---
 
-## 🔧 Setup Instructions
+##  Setup Instructions
 
-### 📦 Backend
+###  Backend
 
 ```bash
 cd backend
